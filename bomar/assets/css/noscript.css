@@ -1,0 +1,25 @@
+body.is-preload #banner h2,
+body.is-preload #banner .subtitle,
+body.is-preload #banner p,
+body.is-preload #banner .actions {
+    transform: none;
+    opacity: 1;
+    animation: none;
+}
+
+body.is-preload #banner .more {
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
+body.is-preload #main > header h2,
+body.is-preload #main > header p {
+    transform: none;
+    opacity: 1;
+    animation: none;
+}
+
+.animate-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+}
