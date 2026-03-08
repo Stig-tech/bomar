@@ -1504,3 +1504,76 @@ body.landing #footer {
 .wrapper.style5 strong, .wrapper.style5 b {
     color: #ffffff;
 }
+
+/* ========== WATERMARK OVERLAY ========== */
+
+#watermark-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 2147483647;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#watermark-overlay .watermark-content {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    transform: rotate(-30deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+}
+
+#watermark-overlay .watermark-row {
+    white-space: nowrap;
+    font-size: 52px;
+    font-weight: 900;
+    color: rgba(255, 0, 0, 0.35);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-family: 'Arial Black', 'Impact', Arial, sans-serif;
+    line-height: 1;
+    text-shadow: 0 0 4px rgba(255, 0, 0, 0.15);
+}
+
+#watermark-overlay .watermark-row:nth-child(even) {
+    transform: translateX(-180px);
+}
+
+#watermark-overlay .watermark-row span {
+    margin-right: 80px;
+}
+
+#watermark-overlay .watermark-border {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid rgba(255, 0, 0, 0.12);
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 736px) {
+    #watermark-overlay .watermark-row {
+        font-size: 32px;
+        letter-spacing: 4px;
+    }
+    #watermark-overlay .watermark-content {
+        gap: 40px;
+    }
+    #watermark-overlay .watermark-row span {
+        margin-right: 40px;
+    }
+}
